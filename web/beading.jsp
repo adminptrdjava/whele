@@ -15,7 +15,7 @@
   alert("onclick Event detected!");
 }
     
-    var timer = setInterval("load_whl()",300000);
+    var timer = setInterval("load_whl()",30000);
       function load_whl(){window.location.replace("whele.jsp"); document.getElementById("content").innerHTML='<object type="type/html" data="whele.jsp" ></object>';
             window.clearTimeout();
   }
@@ -47,6 +47,9 @@ function  click(){
 
 
 </script>
+<html>
+    <title>***</title>
+    <body>
 <h1> BOOK YOUR NO NOW </h1>
 <div style="width: 50%;
     margin: 0 auto;;">
@@ -73,3 +76,5 @@ function  click(){
 <div id ="message"style=""> 
 
 </div>
+</body>
+</html>

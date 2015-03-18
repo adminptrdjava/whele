@@ -23,3 +23,12 @@ $(document).ready(function() {
 });
 });
 </script>
+
+
+<form>
+    <select name="option">
+        <option>MAX</option>
+        <option>MIN</option>
+        <option>AVARAGE</option>
+    </select>
+</form>

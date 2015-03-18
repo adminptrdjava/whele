@@ -7,6 +7,9 @@
 
  function spin(a) {
     // alert("CALL");
+    
+    //for audio
+   
      function getXMLObject()  //XML OBJECT
 {
    var xmlHttp = false;

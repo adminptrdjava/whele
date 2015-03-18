@@ -5,12 +5,10 @@
  */
 package Service;
 
-import DAO.MYSQLDbConnection;
 import Model.Bookbidserv;
 import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.System.out;
-import java.sql.Connection;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,7 +34,8 @@ public class BookBid extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        PrintWriter out = response.getWriter();
+        try {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -47,6 +46,8 @@ public class BookBid extends HttpServlet {
             out.println("<h1>Servlet BookBid at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
+        } finally {
+            out.close();
         }
     }
 
@@ -63,6 +64,8 @@ public class BookBid extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
+        
+        
         int i = Integer.parseInt(request.getParameter("BidVal"));
         Bookbidserv  bd = new  Bookbidserv();
        int k= bd.makebid(i);
@@ -72,15 +75,16 @@ public class BookBid extends HttpServlet {
             
             System.out.println("INSERTED");
              response.setContentType("text/html;charset=UTF-8");
-              try (PrintWriter out = response.getWriter()) {
-             out.println( "INSERTED VALUE: "+i);
+              PrintWriter pw = response.getWriter();
+             pw.print("INSERTED VALUE: "+i);
               }
-        }
+        
         else{
              System.out.println("NOT INSERTED");
              out.println( "ERROR  404");
         }
-        
+
+
     }
 
     /**
@@ -94,23 +98,8 @@ public class BookBid extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       int i = Integer.parseInt(request.getParameter("BidVal"));
-               System.out.println("INSERTED sss" + i);
-        Bookbidserv  bd = new  Bookbidserv();
-       int k= bd.makebid(i);
-        if(k>=1){
-            System.out.println("INSERTED");
-              response.setContentType("text/html;charset=UTF-8");
-            out.println( "\"<div id='flag'>INSERTED</div>\"");
-        }
-        else{
-             System.out.println("NOT INSERTED");
-             out.println( "ERROR  404");
-        }
-        
+        processRequest(request, response);
     }
-    
-    
 
     /**
      * Returns a short description of the servlet.
@@ -119,9 +108,7 @@ public class BookBid extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "INSERTED";
+        return "Short description";
     }// </editor-fold>
 
-    
-    
 }

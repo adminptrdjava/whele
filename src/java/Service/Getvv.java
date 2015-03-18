@@ -20,7 +20,7 @@ public class Getvv {
         int i =0;
         MYSQLDbConnection mysql = new MYSQLDbConnection();
         Connection con = mysql.makeConection();
-        String SQL = "select distinct  num from valview where countval =(select min(countval) from valview );";
+        String SQL = "select distinct  num from valview where countval =(select max(countval) from valview );";
         PreparedStatement ps = con.prepareCall(SQL);
         ResultSet rs = ps.executeQuery();
         while(rs.next()){

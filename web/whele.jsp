@@ -1,22 +1,35 @@
 <%@page import="Service.Getvv"%>
 <!--[if IE]><script type="text/javascript" src="/sites/default/files/1010/source/excanvas.js"></script><![endif]-->
 <script src="js.js" type="text/javascript"></script>
-
+<audio controls>
+    <source id="FF" src="rw.wav" type="audio/wav">
+    
+</audio>
 <% Getvv gv = new Getvv();
 
 int i = gv.getMaxval();
 %>
 <script>
-var timer = setInterval("mytimer()",60000);
+var timer = setInterval("mytimer()",600);
 seconds = 0;
 function mytimer()
 {
 document.getElementById("div_timer").innerHTML = seconds; // this is the same as $("div_timer").html(timer) in       jquery.
 seconds++;
-if(seconds===3)
+if(seconds===3){
     spin(<%=i%>);
- window.clearTimeout();
-} 
+    //window.clearTimeout();
+    
+    
+}
+if(seconds===40){
+    alert("call");
+     load_whl();
+}
+}
+ function load_whl(){window.location.replace("beading.jsp"); document.getElementById("content").innerHTML='<object type="type/html" data="whele.jsp" ></object>';
+            window.clearTimeout();
+        }
         </script>
         <div>TIME </div><div id="div_timer"></div>       
 <form action="Getval">

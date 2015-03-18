@@ -11,16 +11,34 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>***</title>
     </head>
-    <body>
-        <h1>Hello World!</h1>
-        <div style="width: 50%;
-    margin: 0 auto;;">
-            <b><a  href="whele.jsp"> WHELE </a></b><br>
+     <body align="centre"   >
+      
+         <div align="right" >
+           
+            <table background="IMG2.jpg"    border="1" style=" margin: 0 auto; width:1000px; height: 700px; ">
+                
+                <tbody>
+                    <tr>
+                        <td align="left">
+                              <b><a  href="whele.jsp" > WHELE </a></b><br>
             <b><a   href="admin.jsp"> ADMIN </a></b><br>
             <b><a href="beading.jsp">BEADING</a></b><br>
+                        </td>
+                       
+                    </tr>
+                </tbody>
+            </table>
+           
+
+                
+           
             <b> </b>
+            
+            
         </div>
+    
+        
     </body>
 </html>
