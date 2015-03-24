@@ -67,16 +67,18 @@ public class BookBid extends HttpServlet {
         
         
         int i = Integer.parseInt(request.getParameter("BidVal"));
+        String uid = request.getParameter("uid");
+        float mony = Float.parseFloat(request.getParameter("mony"));
         Bookbidserv  bd = new  Bookbidserv();
-       int k= bd.makebid(i);
-       System.out.println(i);
+       int k= bd.makebid(i,mony,uid);
+       System.out.println(i + "uid: "+uid + "mony: "+mony);
        System.out.println(k);
         if(k>=1){
             
             System.out.println("INSERTED");
              response.setContentType("text/html;charset=UTF-8");
               PrintWriter pw = response.getWriter();
-             pw.print("INSERTED VALUE: "+i);
+             pw.print(" "+i);
               }
         
         else{

@@ -28,13 +28,13 @@ public class MYSQLDbConnection {
         /*=======================L O C A L - S  R V  E  R  E N D S  ============================*/ 
         
         
-    /*=======================S  R V  E  R  START  ============================*/
+    /*=======================S  R V  E  R - S T A R T  ============================*/
 //          String DB_URL ="jdbc:mysql://localhost/playdimo_whele";
 //          String USER="playdimo_ptrd";
 //          String pass="zciBpVDPNeGs";
-//          
           
-     /*=======================S  R V  E  R  END  ============================*/
+          
+     /*=======================S  R V  E  R - E N D  ============================*/
          try{
              Class.forName("com.mysql.jdbc.Driver");
              conn = DriverManager.getConnection(DB_URL, USER,pass);

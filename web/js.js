@@ -49,7 +49,10 @@ function  ajaxFunction() {
     spinAngleStart = 40;
     spinTime = 0;
     var dbvalue = a;
-    if(dbvalue<5){
+	if(dbvalue ===0){
+		spinTimeTotal =  1145;
+	}
+    else if(dbvalue<5){
     spinTimeTotal = dbvalue*(980 )+35 ;
 }
  else  if(dbvalue<8){
