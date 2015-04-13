@@ -21,17 +21,17 @@ public class MYSQLDbConnection {
          
          
       /*=======================L O C A L - S  R V  E  R  S T A R T  ============================*/
-        String DB_URL = "jdbc:mysql://localhost/wheel";
-        String USER = "root";
-        String pass="1234";
+//        String DB_URL = "jdbc:mysql://localhost/wheel";
+//        String USER = "root";
+//        String pass="1234";
         
         /*=======================L O C A L - S  R V  E  R  E N D S  ============================*/ 
         
         
     /*=======================S  R V  E  R - S T A R T  ============================*/
-//          String DB_URL ="jdbc:mysql://localhost/playdimo_whele";
-//          String USER="playdimo_ptrd";
-//          String pass="zciBpVDPNeGs";
+          String DB_URL ="jdbc:mysql://localhost/playdimo_whele";
+          String USER="playdimo_ptrd";
+          String pass="zciBpVDPNeGs";
           
           
      /*=======================S  R V  E  R - E N D  ============================*/

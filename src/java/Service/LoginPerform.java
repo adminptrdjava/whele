@@ -94,7 +94,7 @@ public class LoginPerform extends HttpServlet {
         request.getRequestDispatcher("Main.jsp")
     .forward(request,response);
         }else{
-             response.sendRedirect("Login.jsp");
+             response.sendRedirect("Login_1.jsp");
         }
     }
 

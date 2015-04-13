@@ -74,15 +74,13 @@ public class Getvv {
         }catch(Exception E){
             System.out.println("EXCEPTION :"+E);
         }finally{
-            int q= setResult(p);
-            if(q>0)
-                System.out.println("RESULT DONE :"+p);
+            
             return p;
         }
     }
     
     
-    public int  setResult(String no){
+    public int  setResult(int no){
         System.out.println("CALL SAVE  RESULT :"+no);
         int i =0;
         String SQL = "insert into bit_rslt (win_no,date) values (?,?)";
@@ -91,7 +89,7 @@ public class Getvv {
        java.sql.Date sqlDate = new java.sql.Date(time);
         try{
              PreparedStatement pr = con.prepareStatement(SQL);
-             pr.setString(1,no );
+             pr.setInt(1,no );
              pr.setDate(2, sqlDate);
               i = pr.executeUpdate();
         }catch(Exception E){
@@ -117,7 +115,7 @@ public class Getvv {
     
     public ResultSet last5show(String uid){
         ResultSet rs = null;
-         String SQL = "SELECT * FROM bit_rslt ORDER BY id DESC LIMIT 5;";
+         String SQL = "SELECT * FROM bit_rslt ORDER BY id DESC LIMIT 9 ;";
          
         try{
             PreparedStatement pr = con.prepareStatement(SQL);
@@ -128,5 +126,18 @@ public class Getvv {
     }finally{
          return rs;  
         }    
+    }
+    
+    public ResultSet getUserChart(){
+         ResultSet rs = null;
+         String SQL = "select win_no,count(win_no) from bit_rslt group by win_no; ;";
+        try {
+             PreparedStatement pr = con.prepareStatement(SQL);
+            rs=pr.executeQuery();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally{
+            return rs;
+        }
     }
 }

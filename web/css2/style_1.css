@@ -1,0 +1,107 @@
+body{padding:0;margin:0;outline:none;background:#000;}
+*{padding:0;margin:0;outline:none;border:none;}
+.clear{padding:0;margin:0;clear:both;}
+
+@import url(http://fonts.googleapis.com/css?family=Signika);
+
+@font-face {
+    font-family: 'algerianregular';
+    src: url('ALGER_6-webfont.eot');
+    src: url('ALGER_6-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ALGER_6-webfont.woff2') format('woff2'),
+         url('ALGER_6-webfont.woff') format('woff'),
+         url('ALGER_6-webfont.ttf') format('truetype'),
+         url('ALGER_6-webfont.svg#algerianregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.wraper{width:965px;margin:0 auto;background:url(../images/bodybg.png) no-repeat 0 0;min-height:720px;}
+.topleft{width:305px;float:left;}
+.top-mid input{display:none;}
+.top-mid{  width: 265px;
+  float: left;
+  padding-left: 48px;
+  padding-top: 50px;}
+.play{width:237px;height:114px;padding:92px 0 0 36px;display:block;}
+.playt{width:97px;line-height:38px;color:#fdc107;float:left;font-family: 'algerianregular';font-size:28px;text-transform:uppercase;}
+.playtb{width:128px;float:left;padding-left:5px;font-family: 'Signika', sans-serif;font-size:14px;color:#fdc107;background:none;height:38px;}
+.text-gap{margin-bottom:37px;}
+
+.history{margin-top:85px;margin-left:117px;font-family: 'algerianregular';font-size:28px;text-transform:uppercase;color:#fdc107;}
+
+.number-box{padding:47px 0 0 47px;}
+.number-box ul{list-style:none;}
+.zero{width:72px;height:72px;line-height:72px;float:left;font-family: 'algerianregular';font-size:55px;text-align:center;color:#fd0200;margin-right:20px;}
+.one{width:72px;height:72px;line-height:72px;float:left;font-family: 'algerianregular';font-size:55px;text-align:center;color:#fd0200;margin-right:18px;}
+.two{width:72px;height:72px;line-height:72px;float:left;font-family: 'algerianregular';font-size:55px;text-align:center;color:#fd0200;margin-right:18px;}
+.three{width:72px;height:72px;line-height:72px;float:left;font-family: 'algerianregular';font-size:55px;text-align:center;color:#fd0200;margin-right:13px;}
+.four{width:72px;height:72px;line-height:72px;float:left;font-family: 'algerianregular';font-size:55px;text-align:center;color:#fd0200;margin-right:18px;}
+.five{width:72px;height:72px;line-height:72px;float:left;font-family: 'algerianregular';font-size:55px;text-align:center;color:#fd0200;margin-right:17px;}
+.six{width:72px;height:72px;line-height:72px;float:left;font-family: 'algerianregular';font-size:55px;text-align:center;color:#fd0200;margin-right:18px;}
+.seven{width:72px;height:72px;line-height:72px;float:left;font-family: 'algerianregular';font-size:55px;text-align:center;color:#fd0200;margin-right:18px;}
+.eight{width:72px;height:72px;line-height:72px;float:left;font-family: 'algerianregular';font-size:55px;text-align:center;color:#fd0200;margin-right:18px;}
+.nine{width:72px;height:72px;line-height:72px;float:left;font-family: 'algerianregular';font-size:55px;text-align:center;color:#fd0200;margin-right:18px;}
+
+.bt-por{padding-top:59px;padding-right:42px;width:526px;float:right;}
+.info{width:105px;height:37px;display:block;cursor:pointer;float:left;margin-right:2px;}
+.clearbt{width:94px;height:37px;display:block;cursor:pointer;float:left;margin-right:2px;}
+.recent{width:118px;height:37px;display:block;cursor:pointer;float:left;}
+.duble{width:120px;height:37px;display:block;cursor:pointer;float:left;}
+.bet{width:85px;height:37px;display:block;cursor:pointer;float:left;}
+
+.panel-title{left:-50px !important;}
+.history-bt{padding-top:14px;padding-left:43px;height:50px;}
+.hist1{width:48px;height:50px;line-height:50px;font-family: 'algerianregular';font-size:34px;text-align:center;color:#f00;float:left;margin-right:12px}
+.hist2{width:48px;height:50px;line-height:50px;font-family: 'algerianregular';font-size:34px;text-align:center;color:#f00;float:left;margin-right:12px;margin-top:2px;}
+.hist3{width:48px;height:50px;line-height:50px;font-family: 'algerianregular';font-size:34px;text-align:center;color:#f00;float:left;margin-right:12px;margin-top:3px;}
+.hist4{width:48px;height:50px;line-height:50px;font-family: 'algerianregular';font-size:34px;text-align:center;color:#f00;float:left;margin-top:4px;}
+
+.nm-bt{width:864px;margin:0 auto;padding-top:13px;color:#fff;height:43px;}
+.nm-btn1{width:54px;line-height:47px;float:left;font-family: 'algerianregular';font-size:32px;text-align:center;color:#fd0200;margin-right:43px;}
+.nm-btn2{width:52px;line-height:48px;float:left;font-family: 'algerianregular';font-size:32px;text-align:center;color:#fd0200;margin-right:35px;}
+.nm-btn3{width:52px;line-height:48px;float:left;font-family: 'algerianregular';font-size:32px;text-align:center;color:#fd0200;margin-right:32px;}
+
+.nm-btn4{width:52px;line-height:43px;float:left;font-family: 'algerianregular';font-size:32px;text-align:center;color:#fd0200;margin-right:42px;}
+.nm-btn5{width:52px;line-height:42px;float:left;font-family: 'algerianregular';font-size:32px;text-align:center;color:#fd0200;margin-right:38px;}
+.nm-btn6{width:52px;height:37px;line-height:37px;float:left;font-family: 'algerianregular';font-size:32px;text-align:center;color:#fd0200;margin-right:43px;}
+.nm-btn7{width:52px;height:37px;line-height:37px;float:left;font-family: 'algerianregular';font-size:32px;text-align:center;color:#fd0200;margin-right:34px;}
+
+.nm-btn8{width:52px;height:37px;line-height:37px;float:left;font-family: 'algerianregular';font-size:32px;text-align:center;color:#fd0200;margin-right:37px;}
+.nm-btn9{width:52px;line-height:37px;float:left;font-family: 'algerianregular';font-size:32px;text-align:center;color:#fd0200;margin-right:36px;margin-top:-3px;}
+.nm-btn0{width:52px;line-height:47px;float:left;font-family: 'algerianregular';font-size:32px;text-align:center;color:#fd0200;}
+
+.numb-bt{width: 352px;  float: left;padding-left: 43px;padding-top: 47px;height: 51px;}
+.two-bt{width:56px;float:left;height:51px;display:block;}
+.five-bt{width:54px;float:left;height:51px;display:block;}
+.ten-bt{width:58px;float:left;height:51px;display:block;margin-right:2px;}
+.twenty-bt{width:64px;float:left;height:51px;display:block;}
+.fifty-bt{width:54px;float:left;height:51px;display:block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

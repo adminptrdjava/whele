@@ -49,7 +49,7 @@ function initHorizontalBarChart(){
 				pointLabels: { show: true, location: 'e', edgeTolerance: -15 },	
 				rendererOptions: {						
 					barPadding: 0,
-					barMargin: 10,
+					barMargin: 4,
 					barDirection: 'horizontal',
 					barWidth: null,
 					shadowOffset: 0,

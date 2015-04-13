@@ -14,6 +14,6 @@
     <body>
         <h1>Hello World!</h1>
     </body>
-    
-    <%response.sendRedirect("Login.jsp");%>
+     <% //response.sendRedirect("404.html");%>
+     <% response.sendRedirect("Login_1.jsp");%>
 </html>

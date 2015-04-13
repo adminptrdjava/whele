@@ -1,3 +1,5 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="Service.Getvv"%>
 <%@page import="Model.Bean.User"%>
 <!DOCTYPE html>
 <html>
@@ -19,6 +21,8 @@
     <% User usr = (User)session.getAttribute("usr");
     System.out.print("on page :"+usr);
     int L = Integer.parseInt(usr.getLevel());
+    Getvv gvt = new Getvv();
+    ResultSet rs = gvt.getUserChart();
 %>
     
 	<body>
@@ -75,11 +79,42 @@
 		<div id="main_wrapper">
                    
                             <div id="main_content">
-                                
-                                
+                                <!-- page heading -->
+				<div class="page-heading">				
+					<h2 class="page-title">
+						<i class="icon-bars-3"></i> DASHBORD
+					</h2>					
+					<div class="page-info hidden-xs">
+						<ul class="stats">
+							<li>
+								<span class="large text-warning">2354</span>
+								<span class="mini">TOTAL USERS</span>
+							</li>
+							<li>
+								<span class="large text-info">4523</span>
+								<span class="mini">ACTIVE USERS</span>
+							</li>
+							<li>
+								<span class="large text-success">5673</span>
+								<span class="mini">orders</span>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+                                <!-- DESIGN END --->
                                 
                                <!---  WRITE UR CONTENT HERE :)     --->
-                                <h3> HI HI </h3>
+                                <h3 style="color:#FF3333"> HI <%=usr.getUid()%> ! </h3>
+                                
+                                <div class="panel-body">
+                                    <h4 style="color: #00CC00"> WINE NO SERISE </h4>		<!-- ** vertical bar chart ** -->
+                                                                <div id="horizontal-bar-div" style="height:500px;width:100%;" data-legend="false" data-value='[ <%while(rs.next()){ %>[[ <%=rs.getString(2) %>,<%=rs.getString(1)%> ]],<%} %> ]' data-labels="[{label:'Label 1'},{label:'Label 2'},{label:'Label 3'}]" data-colors='[ "#b94a48","#feb847","#464646","#428bca","#50204a","#c09853" ]'></div>
+							
+                                
+                                </div>
+                                
+                                                               
                                 
                             </div>
                        <!-- sidebar -->
@@ -117,7 +152,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="admin.jsp">
 								<i class="icon-stack-3"></i> GAME PLAN
 						  </a>
 						</li>
@@ -152,8 +187,8 @@
 					
 			  </li>
               <%} else {%>
-              
-				<li><a href="beading.jsp">
+                               <!-- chng   -->
+				<li><a href="bead2.jsp">
 						<i class="icon-bars-3"></i>
 						<span>Play</span>
 					</a>
